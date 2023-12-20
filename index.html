@@ -52,6 +52,33 @@
 
         /* Add social media icon styles here */
 
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -80,6 +107,19 @@
                     <li><a href="mailto:jacksondivakar2@gmail.com">jacksondivakar2@gmail.com</a></li>
                 </ul>
             </p>
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/moqgalkr" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
         </section>
 
         <section>
@@ -88,11 +128,21 @@
         </section>
 
         <section>
+            <h2>Skills</h2>
+            <p>I am proficient in Python and various libraries including pandas, numpy, seaborn, matplotlib, and sklearn. I specialize in Exploratory Data Analysis (EDA) and have experience training simple machine learning models using sklearn.</p>
+        </section>
+
+        <section>
             <h2>Connect with Me</h2>
             <p>
                 <a href="https://www.facebook.com/jackson.divakar.9" target="_blank">Facebook</a> | 
                 <a href="https://www.instagram.com/jacksondivakar22/" target="_blank">Instagram</a>
             </p>
+        </section>
+
+        <section>
+            <h2>Experience with ChatGPT and Kaggle</h2>
+            <p>Engaging with ChatGPT has significantly impacted my learning and perspective in AI and data science. I find that it provides more precise and detailed answers, especially when using effective prompts. I enjoy exploring Kaggle notebooks and engaging in conversations about learning data science on Kaggle.</p>
         </section>
     </div>
 
