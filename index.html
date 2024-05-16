@@ -35,18 +35,48 @@
             top: 10px;
             right: 10px;
         }
+        .switch button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact-form label {
+            font-weight: bold;
+        }
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 10px;
             margin: 5px 0;
             box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
         .contact-form button {
             padding: 10px 20px;
             background-color: #28a745;
             color: #fff;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+        }
+        .social-links img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -86,11 +116,11 @@
         <div class="section">
             <h2>Contact Information</h2>
             <p>Email: <a href="mailto:Jacksondivakar@gmail.com">Jacksondivakar@gmail.com</a>, <a href="mailto:JacksonDivakar2@gmail.com">JacksonDivakar2@gmail.com</a></p>
-        
+            
         </div>
-        <section>
+        <section class="section">
             <h2>Contact Form</h2>
-            <form action="https://formspree.io/f/moqgalkr" method="post">
+            <form action="https://formspree.io/f/moqgalkr" method="post" class="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email:</label>
@@ -102,11 +132,11 @@
         </section>
         <div class="section">
             <h2>Social Links</h2>
-            <p>
-                <a href="https://www.linkedin.com/in/jackson-divakar/">LinkedIn</a> | 
-                <a href="https://www.kaggle.com/jacksondivakarr">Kaggle</a> | 
-                <a href="https://www.instagram.com/jackson_divakar_r/">Instagram</a> | 
-                <a href="https://www.facebook.com/jackson.divakar.9/">Facebook</a>
+            <p class="social-links">
+                <a href="https://www.linkedin.com/in/jackson-divakar/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">LinkedIn</a> | 
+                <a href="https://www.kaggle.com/jacksondivakarr"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" alt="Kaggle">Kaggle</a> | 
+                <a href="https://www.instagram.com/jackson_divakar_r/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">Instagram</a> | 
+                <a href="https://www.facebook.com/jackson.divakar.9/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">Facebook</a>
             </p>
         </div>
     </div>
