@@ -3,161 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackson Divakar R - Personal Website</title>
+    <title>Jackson Divakar's Portfolio</title>
     <style>
-        /* Reset some default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Define your page styles here */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s, color 0.3s;
         }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
         .container {
-            max-width: 800px;
+            width: 80%;
             margin: 0 auto;
             padding: 20px;
+        }
+        .header, .section {
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            text-align: center;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+        .light-mode {
             background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            color: #000;
         }
-
-        /* Add more styles for your content here */
-        .strengths {
-            font-weight: bold;
+        .switch {
+            position: fixed;
+            top: 10px;
+            right: 10px;
         }
-
-        .contact-info a {
-            text-decoration: none;
-            color: #007bff;
-        }
-
-        /* Add social media icon styles here */
-
-        form {
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        input, textarea {
+        .contact-form input, .contact-form textarea {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
             box-sizing: border-box;
         }
-
-        button {
-            background-color: #333;
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #28a745;
             color: #fff;
-            padding: 10px 15px;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        /* Style for the photo */
-        .profile-photo {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-            margin-bottom: 20px;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Jackson Divakar R</h1>
-        <p>Aspiring Data Scientist | B.Tech AI & DS Student</p>
-    </header>
-
-    <div class="container">
-        <!-- Profile Photo -->
-        <img class="profile-photo" src= 'https://raw.githubusercontent.com/JacksonDivakar/About-me/main/387802e0-db94-42e6-b41d-2e114f42977d.jpg' alt="Your Profile Photo">
-
-        <section>
-            <h2>About Me</h2>
-            <p>I am a student at VSB Engineering College with a passion for becoming a data scientist. I am continuously learning and exploring various aspects of data science and AI.</p>
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-            <p>Contact me at:
-                <ul class="contact-info">
-                    <li><a href="mailto:jacksondivakar@gmail.com">jacksondivakar@gmail.com</a></li>
-                    <li><a href="mailto:jacksondivakar2@gmail.com">jacksondivakar2@gmail.com</a></li>
-                </ul>
-            </p>
-        </section>
-
-        <section>
-            <h2>Hobbies</h2>
-            <p>One of my hobbies is asking questions with ChatGPT, and I enjoy engaging in discussions on Kaggle. You can find my Kaggle profile <a href="https://www.kaggle.com/jacksondivakarr" target="_blank">here</a>.</p>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <p>I am currently learning and expanding my skills in Python and various data science libraries, including pandas, numpy, seaborn, matplotlib, and sklearn. I am focused on developing expertise in Exploratory Data Analysis (EDA) and machine learning.</p>
-        </section>
-
-        <section>
-            <h2>Connect with Me</h2>
-            <p>
-                <a href="https://www.facebook.com/jackson.divakar.9" target="_blank">Facebook</a> | 
-                <a href="https://www.instagram.com/jacksondivakar22/" target="_blank">Instagram</a>
-            </p>
-        </section>
-
-        <!-- Contact Form -->
-        <section>
-            <h2>Contact Form</h2>
-            <form action="https://formspree.io/f/moqgalkr" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+<body class="light-mode">
+    <div class="switch">
+        <button onclick="toggleMode()">Switch to Dark Mode</button>
     </div>
-
-    <footer>
-        &copy; 2023 Jackson Divakar R
-    </footer>
+    <div class="container">
+        <div class="header">
+            <h1>Jackson Divakar's Portfolio</h1>
+        </div>
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I am a student at VSB Engineering College with a passion for becoming a data scientist. I am continuously learning and exploring various aspects of data science and AI. I am interested in data analysis, time series analysis, and machine learning.</p>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <p>Currently pursuing B.Tech in Artificial Intelligence and Data Science.</p>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>Time Series Analysis Using ARIMA and LSTM models</li>
+                <li>Basic Gender Classification using Tabular Data</li>
+                <li>Statistical z-t test tool using Python</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Time Series Analysis</li>
+                <li>Data Visualization</li>
+                <li>Machine Learning with Scikit-learn</li>
+                <li>Basic Deep Learning</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:Jacksondivakar@gmail.com">Jacksondivakar@gmail.com</a>, <a href="mailto:JacksonDivakar2@gmail.com">JacksonDivakar2@gmail.com</a></p>
+            <p>Phone: +919025579985</p>
+            <div class="contact-form">
+                <h3>Contact Me</h3>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Social Links</h2>
+            <p>
+                <a href="https://www.linkedin.com/in/jackson-divakar/">LinkedIn</a> | 
+                <a href="https://www.kaggle.com/jacksondivakarr">Kaggle</a> | 
+                <a href="https://www.instagram.com/jackson_divakar_r/">Instagram</a> | 
+                <a href="https://www.facebook.com/jackson.divakar.9/">Facebook</a>
+            </p>
+        </div>
+    </div>
+    <script>
+        function toggleMode() {
+            var body = document.body;
+            var button = document.querySelector('.switch button');
+            if (body.classList.contains('light-mode')) {
+                body.classList.replace('light-mode', 'dark-mode');
+                button.textContent = 'Switch to Light Mode';
+            } else {
+                body.classList.replace('dark-mode', 'light-mode');
+                button.textContent = 'Switch to Dark Mode';
+            }
+        }
+    </script>
 </body>
 </html>
